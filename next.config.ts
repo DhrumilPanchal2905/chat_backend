@@ -54,6 +54,7 @@ const nextConfig = {
     NEXT_APP_ENVIRONMENT: process.env.NEXT_APP_ENVIRONMENT,
     NEXT_APP_BASE_URL: process.env.NEXT_APP_BASE_URL,
     MONGODB_URI: process.env.MONGODB_URI,
+    GOOGLE_APPLICATION_CREDENTIALS: process.env.GOOGLE_APPLICATION_CREDENTIALS,
   },
   // future: {
   //   webpack5: true,
