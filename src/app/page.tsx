@@ -68,7 +68,7 @@ export default function ChatApp() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      const socketInstance = io("http://localhost:3001", {
+      const socketInstance = io("https://chat-backend-1-gtya.onrender.com", {
         query: { username, role },
       });
 
@@ -113,7 +113,7 @@ export default function ChatApp() {
         formData.append("sender", username);
         formData.append("role", role);
 
-        const response = await fetch("http://localhost:3001/upload", {
+        const response = await fetch("https://chat-backend-1-gtya.onrender.com/upload", {
           method: "POST",
           body: formData,
         });
@@ -154,7 +154,7 @@ export default function ChatApp() {
                 <div
                   className={`max-w-[70%] rounded-lg px-4 py-2 ${
                     message.sender === username
-                      ? "bg-blue-500 text-white"
+                      ? "bg-black text-white"
                       : "bg-gray-200"
                   }`}
                 >
