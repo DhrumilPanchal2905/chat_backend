@@ -56,9 +56,8 @@ const KEY_FILE_PATH = ".src/GConsole_json_key/private.json"; // 🔹 Ensure this
 const SCOPES = ["https://www.googleapis.com/auth/drive.file"];
 
 const auth = new google.auth.GoogleAuth({
-  keyFile:
-    process.env.GOOGLE_APPLICATION_CREDENTIALS,
-    scopes: SCOPES,
+  keyFile: process.env.GOOGLE_APPLICATION_CREDENTIALS || "./service-account.json",
+  scopes: SCOPES,
 });
 
 const drive = google.drive({ version: "v3", auth });
