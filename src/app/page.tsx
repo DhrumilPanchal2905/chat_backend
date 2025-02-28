@@ -68,7 +68,7 @@ export default function ChatApp() {
 
   useEffect(() => {
     if (isLoggedIn) {
-      const socketInstance = io("https://chat-backend2905.onrender.com", {
+      const socketInstance = io("http://localhost:3001", {
         query: { username, role },
       });
 
@@ -113,7 +113,7 @@ export default function ChatApp() {
         formData.append("sender", username);
         formData.append("role", role);
 
-        const response = await fetch("https://chat-backend2905.onrender.com/upload", {
+        const response = await fetch("http://localhost:3001/upload", {
           method: "POST",
           body: formData,
         });
